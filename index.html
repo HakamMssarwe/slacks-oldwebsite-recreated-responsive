@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Practice</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#"><img src="./assets/logo.svg" alt="logo"/> Slack</a>
+            <img id="open-nav" src="assets/open-nav.svg" alt="Open the Nav">
+            <nav id="nav">
+                <img id="close-nav" src="assets/close-nav.svg" alt="Close the Nav">
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Recources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li><a href="#">Sign in</a></li>
+                    <li class="get-started-cta"><a href="#">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="header">
+        <div class="container">
+            <div class="left-col">
+                <p>Join us at Frontiers, a conference by Slack, in SF & NYC</p>
+            </div>
+            <button class="register-now-cta">Register Now</button>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="container">
+            <img src="./assets/illustration.svg" alt="illustration">
+            <div class="right-col">
+                <h1>Where Work Happens</h1>
+                <p class="feature">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatum, error eveniet, optio architecto ipsam enim atque, id quo officiis aperiam sint numquam. Illo, sint. Sapiente fugit consequuntur consectetur commodi!</p>
+                <form>
+                 <input name="email" type="email" placeholder="Email address">
+                 <button type="submit">Get Started</button>
+                </form>
+                <p class="question">Already using Slack? <a href="#">Sign in.</a></p>
+
+            </div>
+        </div>
+    </section>
+
+
+<script>
+const openNav = document.getElementById('open-nav')
+const closeNav = document.getElementById('close-nav')
+const nav = document.getElementById('nav')
+
+openNav.addEventListener('click',() => {nav.style.display = "block"; openNav.style.display = "none"})
+closeNav.addEventListener('click',() => {nav.style.display = "none"; openNav.style.display = "block"})
+</script>
+
+
+</body>
+</html>
