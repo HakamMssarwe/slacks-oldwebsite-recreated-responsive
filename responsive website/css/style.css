@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+:root {
+  --primaryColor: #1A1938;
+  --primaryButtonColor: #3f46ad;
+}
+
+body {
+  background-color: #F2F2F2;
+  margin: 0;
+  font-family: "Poppins";
+  overflow: hidden;
+}
+
+.navbar {
+  padding: 1em;
+  background-color: white;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar .logo img {
+  width: 1.5em;
+  float: left;
+  margin-right: 0.2em;
+}
+
+.navbar nav#nav {
+  text-align: right;
+  display: none;
+}
+
+.navbar nav#nav a {
+  color: var(--primaryColor);
+}
+
+.navbar nav#nav a:hover {
+  font-weight: bold;
+}
+
+.navbar #open-nav {
+  width: 2em;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 1em;
+  position: absolute;
+  right: 1em;
+}
+
+.navbar #close-nav {
+  width: 2em;
+  float: right;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.navbar .current {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  clear: both;
+  display: block;
+  margin-top: 0.5em;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+section {
+  padding: 2em 5em;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  text-align: center;
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+.header .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .left-col {
+  display: inline;
+}
+
+.header .left-col p {
+  font-size: 1.5em;
+  display: inline;
+  position: relative;
+}
+
+.header .left-col p::before {
+  content: '';
+  background-image: url(../assets/logo.svg);
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -1em;
+  margin-top: 0.2em;
+}
+
+.header button.register-now-cta {
+  width: 10em;
+  padding: 0.6em;
+  background-color: var(--primaryButtonColor);
+  font-weight: bold;
+  color: white;
+  border: none;
+  font-size: 1.1em;
+  margin: 0 auto;
+  border-radius: 0.3em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+section.hero {
+  margin-top: 1em;
+  text-align: center;
+}
+
+section.hero img {
+  width: 45% !important;
+  display: none;
+}
+
+section.hero .right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.hero .right-col h1 {
+  color: var(--primaryColor);
+  font-size: 2em;
+}
+
+section.hero .right-col p.feature {
+  margin-left: -3em;
+  margin-right: -3em;
+}
+
+section.hero .right-col form {
+  margin-top: 2em;
+  margin-left: -3em;
+  margin-right: -3em;
+}
+
+section.hero .right-col form input {
+  width: 17em;
+  padding: 0.7em;
+}
+
+section.hero .right-col form button {
+  background-color: var(--primaryButtonColor);
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: .8em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+section.hero .right-col p.question {
+  font-size: 1em;
+}
+
+section.hero .right-col p.question a {
+  color: var(--primaryButtonColor);
+}
+
+@media only screen and (min-width: 768px) {
+  .right-col h1 {
+    color: var(--primaryColor);
+    font-size: 3em !important;
+    line-height: 1em;
+  }
+  .right-col p.feature {
+    margin: 0;
+    width: 80%;
+  }
+  #open-nav, #close-nav {
+    display: none !important;
+  }
+  .navbar .container {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
+  }
+  .navbar .container #nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar .container #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .container #nav ul li {
+    margin-left: 0.7em;
+  }
+  .navbar .container .get-started-cta {
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border: 2px solid var(--primaryButtonColor);
+    font-weight: bold;
+    -webkit-transition: background 1s;
+    transition: background 1s;
+    font-size: 0.9em;
+  }
+  .navbar .container .get-started-cta a {
+    color: var(--primaryButtonColor) !important;
+  }
+  .navbar .container .get-started-cta:hover {
+    background-color: var(--primaryButtonColor);
+  }
+  .navbar .container .get-started-cta:hover a {
+    color: white !important;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .navbar .container {
+    -ms-grid-columns: 15% 85%;
+        grid-template-columns: 15% 85%;
+  }
+  .header .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .container .register-now-cta {
+    margin: 0;
+    margin-left: 1em;
+  }
+  section.hero {
+    padding: 2em 4em !important;
+  }
+  section.hero img {
+    display: block;
+  }
+  .right-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -5em;
+  }
+  .right-col h1 {
+    color: var(--primaryColor);
+    font-size: 3em !important;
+    line-height: 1em;
+  }
+  .right-col p.feature {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  section.hero {
+    padding: 2em 7em !important;
+  }
+  .navbar .container {
+    -ms-grid-columns: 10% 90%;
+        grid-template-columns: 10% 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
